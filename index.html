@@ -1,0 +1,78 @@
+<!DOCTYPE html><html><head>
+
+  <!-- Materialize -->
+  <link rel="stylesheet" href="css/materialize.min.css">
+
+  <!-- Theme's Stylesheet -->
+  <link rel="stylesheet" href="css/style.css">
+
+  <!-- Theme JS -->
+  <script src="js/particles.js"></script>
+  
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="css/all.css" crossorigin="anonymous">
+  
+  <!-- Title -->
+  <title>NeadApTar</title>
+  
+  <!-- Icon -->
+  <link rel="shortcut icon" type="image/png" href="images/favicon.png">
+
+  <!-- Meta Info -->
+  <meta charset="UTF-8">
+  <meta name="author" content="NeadApTar">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <script src="js/jquery.min.js"></script>
+  <script>
+    $(document).ready(function(){
+      let numberOfImages=5;
+      let random = Math.round(Math.random()*(numberOfImages-1))+1;
+      let imgPath=('./img/background' + random + '.jpg');
+      let nav_bar = '#29265a';
+      if (random === 2) nav_bar = '#193e7c';
+      else if (random === 3) nav_bar = '#011C39';
+      else if (random === 4) nav_bar = '#793077';
+      else if (random === 5) nav_bar = '#B59C88';
+
+      $('body').css('background-image', ('url("' + imgPath + '")'));
+      $('#nav-box').css('background', (nav_bar));
+    });
+  </script>
+
+</head>
+
+<body>
+  <!-- Nav -->
+  <div id="nav-box">
+    <div class="navbar-fixed">
+      <nav class="z-depth-0">
+        <div class="nav-wrapper">
+          <ul>
+            <li><a href="#"><span data-balloon="Имя в Discord - NeadApTar#2403" data-balloon-pos="down" style="z-index: 2;"><i class="fab fa-discord"></i></span></a></li>
+			<li><a href="https://steamcommunity.com/id/neadaptar"><span data-balloon="Я в Steam" data-balloon-pos="down" style="z-index: 2;"><i class="fab fa-steam"></i></span></a></li>
+            <li><a href="https://vk.com/neadaptar"><span data-balloon="Я в ВКонтакте" data-balloon-pos="down" style="z-index: 2;"><i class="fab fa-vk"></i></span></a></li>
+            <li><a href="https://store.neadaptar.ru"><span data-balloon="Мой магазин (просто так)" data-balloon-pos="down" style="z-index: 2;"><i class="fas fa-store-alt"></i></span></a></li>
+            <li><a href="https://www.shield.land"><span data-balloon="Наш портал с блогами, так же Саб Сервер Minecraft " data-balloon-pos="down" style="z-index: 2;"><i class="fas fa-shield-alt"></i></span></a></li>
+          </ul>
+        </div>
+      </nav>
+    </div>
+  </div>
+  <!-- / Nav -->
+
+  <!-- Nick -->
+  <div class="nick">
+      <span data-balloon="Мой никнейм" data-balloon-pos="up">NeadApTar</span>
+  </div>
+  <!-- / Nick -->
+
+  <!-- Particles -->
+  <div id="particles-js"></div>
+
+  <script src="js/particles-app.js"></script>
+  <!-- / Particles -->
+
+
+
+</body></html>
