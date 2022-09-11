@@ -1,6 +1,6 @@
 body {
   margin:0;
-  background-repeat: no-repeat;
+  background-repeat: no-repeat no-repeat;
   background-size: cover;
 }
 
@@ -62,7 +62,14 @@ nav {
 /*Tooltips*/
 button[data-balloon] {
   overflow: visible; }
-
+.alfabank {
+    display: block;
+    width: 45px;
+    height: 45px;
+    background-repeat: no-repeat no-repeat;
+    background: url(/images/alfabank.svg) 0 0;
+    background-size: contain;
+}
 [data-balloon] {
   position: relative;
   cursor: pointer; }
