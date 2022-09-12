@@ -390,7 +390,7 @@ button[data-balloon] {
     white-space: normal;
     width: 80px; }
   [data-balloon][data-balloon-length='medium']:after {
-    white-space: normal;
+    white-space: normal;v
     width: 150px; }
   [data-balloon][data-balloon-length='large']:after {
     white-space: normal;
@@ -398,7 +398,7 @@ button[data-balloon] {
   [data-balloon][data-balloon-length='xlarge']:after {
     white-space: normal;
     width: 380px; }
-    @media screen and (max-width: 768px) {
+    @media screen and (max-width: 320px) {
       [data-balloon][data-balloon-length='xlarge']:after {
         white-space: normal;
         width: 90vw; } }
