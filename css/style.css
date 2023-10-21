@@ -41,9 +41,10 @@ a {
   justify-content: space-evenly;
   top: -13px;
   padding-top: 18px;
-  z-index: 1;
+  z-index: 10;
   border-radius: 20px;
   box-shadow: 1px 1px 35px rgba(255, 255, 255, 0.05);
+
 }
 
 nav {
@@ -403,3 +404,119 @@ button[data-balloon] {
     white-space: normal;
     width: 100%; }
 /*Tooltips END*/
+.products-section {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 50px 0;
+}
+
+.product-container {
+    width: 300px;
+    padding: 20px;
+    margin: 20px;
+    border-radius: 15px;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.15);
+    position: relative;
+    z-index: 1; /* This ensures the product container stays above the particles */
+    text-align: center; /* Centers the content inside the product container */
+    background-color: rgba(255, 255, 255, 0.7); /* This adds a semi-transparent white background */
+}
+
+
+.product-container img {
+    width: 100%;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+.product-container h3 {
+    margin: 10px 0;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.product-container p {
+    margin-bottom: 20px;
+}
+
+.product-container .btn {
+    padding: 10px 20px;
+    background-color: #fff;
+    color: inherit;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.product-container .btn:hover {
+    background-color: rgba(255, 255, 255, 0.8);
+}
+.button-85 {
+  padding: 0.0001em 1em;
+  border: none;
+  outline: none;
+  color: rgb(255, 255, 255);
+  background: #111;
+  cursor: pointer;
+  position: relative;
+  z-index: 0;
+  border-radius: 10px;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.button-85:before {
+  content: "";
+  background: linear-gradient(
+    45deg,
+    #ff0000,
+    #ff7300,
+    #fffb00,
+    #48ff00,
+    #00ffd5,
+    #002bff,
+    #7a00ff,
+    #ff00c8,
+    #ff0000
+  );
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  background-size: 400%;
+  z-index: -1;
+  filter: blur(5px);
+  -webkit-filter: blur(5px);
+  width: calc(100% + 4px);
+  height: calc(100% + 4px);
+  animation: glowing-button-85 20s linear infinite;
+  transition: opacity 0.3s ease-in-out;
+  border-radius: 10px;
+}
+
+@keyframes glowing-button-85 {
+  0% {
+    background-position: 0 0;
+  }
+  50% {
+    background-position: 400% 0;
+  }
+  100% {
+    background-position: 0 0;
+  }
+}
+
+.button-85:after {
+  z-index: -1;
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: #222;
+  left: 0;
+  top: 0;
+  border-radius: 10px;
+}
