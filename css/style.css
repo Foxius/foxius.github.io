@@ -388,7 +388,7 @@ button[data-balloon] {
     white-space: normal;
     width: 80px; }
   [data-balloon][data-balloon-length='medium']:after {
-    white-space: normal;v
+    white-space: normal;
     width: 150px; }
   [data-balloon][data-balloon-length='large']:after {
     white-space: normal;
@@ -519,4 +519,37 @@ button[data-balloon] {
   left: 0;
   top: 0;
   border-radius: 10px;
+}
+
+/* Стили для экранов с максимальной шириной 768px (для мобильных устройств) */
+@media only screen and (max-width: 768px) {
+  .product-container {
+    margin-top:900px;
+    flex-direction: column; /* меняем направление с рядов на столбцы */
+    align-items: center;
+    justify-content: center;
+  }
+
+  .product-image, .product-description {
+    width: 100%; /* обе колонки теперь будут занимать всю ширину */
+    padding: 10px; /* уменьшаем отступы для мобильной версии */
+  }
+
+  .product-description h2, .product-description li, .product-description p, .product-description a {
+    text-align: center; /* центрируем текст для мобильной версии */
+    word-wrap: break-word; /* разрешаем перенос слов, чтобы текст не выходил за границы */
+    overflow-wrap: break-word;
+  }
+
+  .button-85 {
+    width: 90%; /* делаем кнопку шире на мобильных устройствах */
+    margin: 10px auto; /* добавляем отступы сверху и снизу и центрируем кнопку */
+  }
+  li {
+  margin-bottom: 1em; /* Или используйте px, % и т. д. */
+}
+  hr {
+    width: 150px;
+    align: center;
+  }
 }
