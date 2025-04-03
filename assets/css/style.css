@@ -1,0 +1,209 @@
+@font-face {
+  font-family: 'Radiance';
+  src: url('../fonts/radiance.ttf');
+}
+body {
+  margin: 0;
+  background-size: cover;
+  background-position: center;
+  min-height: 100vh;
+  font-family: 'Radiance', Arial, sans-serif;
+}
+#particles-js {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+.nick {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+}
+.nick span {
+  background: linear-gradient(45deg, #ff00c8, #00ffd5);
+  -webkit-background-clip: text;
+  color: transparent;
+  font-size: 10vw;
+  text-shadow: 0 0 20px rgba(255, 255, 255, 0.5);
+}
+#nav-box {
+  position: absolute;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 300px;
+  height: 58px;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  z-index: 10;
+  border-radius: 20px;
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.2);
+}
+.nav-wrapper i {
+  font-size: 1.5em;
+  transition: transform 0.3s ease;
+}
+.nav-wrapper li:hover i {
+  transform: scale(1.2);
+}
+nav {
+  background-color: transparent;
+  transition: background-color 0.5s ease-in-out;
+}
+.products-section {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 80px 20px;
+  position: relative;
+  z-index: 2;
+}
+.product-container {
+  width: 300px;
+  padding: 20px;
+  margin: 20px;
+  border-radius: 15px;
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  text-align: center;
+  color: #fff;
+}
+.product-container:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 0 30px rgba(255, 255, 255, 0.3);
+}
+.product-container img {
+  width: 100%;
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+.product-title {
+  font-size: 1.5em;
+  margin: 10px 0;
+}
+.product-description {
+  color: #fff;
+  text-align: center;
+}
+.product-description ul {
+  list-style: none;
+  padding: 0;
+}
+.product-description li {
+  margin: 10px 0;
+  text-align: left;
+}
+.button-85 {
+  padding: 0.6em 1.5em;
+  border: none;
+  background: #111;
+  color: #fff;
+  cursor: pointer;
+  border-radius: 10px;
+  position: relative;
+  z-index: 0;
+  transition: transform 0.3s ease;
+}
+.button-85:before {
+  content: "";
+  background: linear-gradient(45deg, #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000);
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  background-size: 400%;
+  z-index: -1;
+  filter: blur(5px);
+  width: calc(100% + 4px);
+  height: calc(100% + 4px);
+  animation: glowing-button-85 20s linear infinite;
+  border-radius: 10px;
+}
+@keyframes glowing-button-85 {
+  0% { background-position: 0 0; }
+  50% { background-position: 400% 0; }
+  100% { background-position: 0 0; }
+}
+.button-85:after {
+  z-index: -1;
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: #222;
+  left: 0;
+  top: 0;
+  border-radius: 10px;
+}
+.button-85:hover {
+  transform: scale(1.05);
+}
+.reviews-section {
+  max-width: 600px;
+  margin: 80px auto;
+  padding: 20px;
+  position: relative;
+  z-index: 2;
+}
+.reviews-title {
+  font-size: 2em;
+  color: #fff;
+  text-align: center;
+  margin-bottom: 40px;
+}
+.review {
+  background-color: rgba(255, 255, 255, 0.9);
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+  display: flex;
+  margin-bottom: 20px;
+  padding: 15px;
+  border-radius: 10px;
+  animation: fadeIn 0.5s ease-in;
+}
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+.review-avatar img {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  margin-right: 20px;
+}
+.review-content {
+  flex: 1;
+}
+.review-author a {
+  font-size: 1.2em;
+  color: #00ffd5;
+  text-decoration: none;
+}
+.review-author a:hover {
+  text-decoration: underline;
+}
+.review-rating i {
+  color: #ffd700;
+  text-shadow: 0 0 5px #ff00c8;
+}
+.review-text {
+  margin: 10px 0;
+}
+.review-date {
+  color: #888;
+  font-size: 0.9em;
+}
+@media (max-width: 768px) {
+  .product-container {
+      width: 100%;
+      margin: 10px 0;
+  }
+  .product-description {
+      width: 100%;
+  }
+  .product-image {
+      width: 100%;
+  }
+}
